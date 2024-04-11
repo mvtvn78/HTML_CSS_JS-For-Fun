@@ -1,0 +1,117 @@
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px; color:#666;
+}
+
+.fl {
+	float: left
+}
+.fr {
+	float: right
+}
+.sdt{
+    color:#69B3DD;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-right: 20px;
+    font-size: 22px;
+}
+.tcenter {
+	text-align: center
+}
+.tright {
+	text-align: right
+}
+.xanh {
+    color:#69B3DD;
+}
+.header-menu >li
+{
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 9px;
+    transition: all .3s ;
+}
+.header-menu >li:hover {
+    background: #1b89e4;
+    color: white;
+}
+.overview
+{
+    background:#E0EDF5 ;
+}
+.footer
+{
+    background: #00A3E4;
+}
+.logo_header{
+    padding: 30px;
+    padding-bottom: 40px;
+}
+.imgfull
+{
+    width: 100%;
+    object-fit: cover;
+}
+.slider_header
+{
+    padding: 20px;
+}
+.tintuc > ul
+{
+    list-style-image: url(liststyleimg.png);
+    margin-left: 20px;
+}
+.tintuc > ul > li{
+    padding: 5px;
+}
+.tintuc > h3{
+    margin-left: 40px;
+}
+
+.dinhvu > img
+{
+    padding: 10px;
+}
+.dinhvu > h3,.dinhvu > h4{
+    margin-left: 12px;
+}
+.ctud > img{
+    padding: 10px;
+}
+.ctud > h3 , .ctud > h4
+{
+    margin-left: 12px;
+}
+.menu-hover
+{
+    position: relative;
+    transition: all .3s;
+}
+.menu-hover:hover .item-hover
+{
+    display: block;
+}
+.item-hover{
+    position: absolute;
+    top:100%;
+    left:0;
+    list-style: none;
+    padding: 0 20px;
+    background: #FFFFFF;
+    border: 3px solid  #0182C3;
+    display: none;
+}
+.item-hover li {
+    min-width: 150px;
+    border-bottom:  3px solid  #0182C3;
+    color: black;
+}
