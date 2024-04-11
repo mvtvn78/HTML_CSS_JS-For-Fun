@@ -1,0 +1,8 @@
+.file_container {
+  position: relative;
+}
+.file {
+  position: absolute;
+  background: #000;
+  opacity: 0.4;
+}
