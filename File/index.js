@@ -40,6 +40,24 @@
 // };
 /* Code Stack 2 */
 const file = document.getElementById("file");
-file.ondrop = () => {
-  console.log("Oke");
+const progress = document.getElementById("prog");
+file.onchange = (e) => {
+  const name_file = e.target.files[0];
+  console.log(name_file);
+  const fileReader = new FileReader();
+  fileReader.readAsText(name_file);
+  fileReader.onload = () => {
+    console.log(fileReader.result);
+  };
+  fileReader.onerror = () => {
+    console.log(fileReader.error);
+  };
+  fileReader.onprogress = (e) => {
+    progress.value += e.loaded / e.loaded;
+    console.log(progress.value);
+  };
 };
+// Drop
+file.ondrop = (e) => {};
+// Drag
+file.ondragenter = (e) => {};
