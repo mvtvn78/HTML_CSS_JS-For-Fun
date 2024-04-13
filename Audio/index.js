@@ -59,7 +59,7 @@ my_audio.addEventListener("play", () => {
   control[0].appendChild(svg2);
   handleVolumeChange();
 });
-my_audio.addEventListener("volumechange", () => {
+my_audio.addEventListener("volumechange", (e) => {
   handleVolumeChange();
 });
 svg1.onclick = () => {
@@ -77,11 +77,14 @@ svg4.onclick = () => {
 svg5.onclick = () => {
   my_audio.volume = 1;
 };
-my_audio.addEventListener("timeupdate", () => {
-  M_bar.value = (my_audio.currentTime / my_audio.duration) * 100;
-  console.log(M_bar.value);
+my_audio.addEventListener("timeupdate", (e) => {
+  setTimeout(() => {
+    M_bar.value = (my_audio.currentTime / my_audio.duration) * 100;
+  }, 0);
 });
-M_bar.onchange = (e) => {
+M_bar.onclick = (e) => {
+  my_audio.pause();
   const value = e.target.value;
   my_audio.currentTime = value * (my_audio.duration / 100);
+  my_audio.play();
 };
