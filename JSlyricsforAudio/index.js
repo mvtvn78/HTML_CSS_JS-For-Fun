@@ -23,7 +23,7 @@ liricle.on("sync", (line, word) => {
 });
 
 // load lyric
-liricle.load({ url: "lyrics_enhance.lrc" });
+liricle.load({ url: "Runnow_basic.lrc" });
 
 // adjust lyric speed
 // positive value => speed up
